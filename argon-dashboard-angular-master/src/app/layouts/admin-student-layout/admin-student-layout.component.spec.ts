@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { UserProfileComponent } from './user-profile.component';
+import { AdminStudentLayoutComponent } from './admin-student-layout.component';
 
-describe('UserProfileComponent', () => {
-  let component: UserProfileComponent;
-  let fixture: ComponentFixture<UserProfileComponent>;
+describe('AdminStudentLayoutComponent', () => {
+  let component: AdminStudentLayoutComponent;
+  let fixture: ComponentFixture<AdminStudentLayoutComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserProfileComponent ]
+      declarations: [ AdminStudentLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserProfileComponent);
+    fixture = TestBed.createComponent(AdminStudentLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

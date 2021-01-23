@@ -103,16 +103,22 @@ argon-dashboard-angular
 │   │   │   └── sidebar
 │   │   │       ├── sidebar.component.html
 │   │   │       ├── sidebar.component.scss
-│   │   │       ├── sidebar.component.spec.ts
-│   │   │       └── sidebar.component.ts
+│   │   │       ├── sidebar-student.component.spec.ts
+│   │   │       └── sidebar-student.component.ts
+│   │   │   └── sidebar-student
+│   │   │       ├── sidebar-student.component.html
+│   │   │       ├── sidebar-student.component.scss
+│   │   │       ├── sidebar-student.component.spec.ts
+│   │   │       └── sidebar-student.component.ts
 │   │   ├── layouts
 │   │   │   ├── admin-layout
 │   │   │   │   ├── admin-layout.component.html
 │   │   │   │   ├── admin-layout.component.scss
-│   │   │   │   ├── admin-layout.component.spec.ts
-│   │   │   │   ├── admin-layout.component.ts
-│   │   │   │   ├── admin-layout.module.ts
-│   │   │   │   └── admin-layout.routing.ts
+│   │   │   │   ├── admin-student-layout.component.spec.ts
+│   │   │   │   ├── admin-student-layout.component.ts
+│   │   │   │   ├── admin-student-layout.module.ts
+│   │   │   │   └── admin-student-layout.routing.ts
+
 │   │   │   └── auth-layout
 │   │   │       ├── auth-layout.component.html
 │   │   │       ├── auth-layout.component.scss
@@ -124,8 +130,13 @@ argon-dashboard-angular
 │   │   │   ├── dashboard
 │   │   │   │   ├── dashboard.component.html
 │   │   │   │   ├── dashboard.component.scss
-│   │   │   │   ├── dashboard.component.spec.ts
+│   │   │   │   ├── dashboard-student.component.spec.ts
 │   │   │   │   └── dashboard.component.ts
+│   │   │   ├── dashboard-student
+│   │   │   │   ├── dashboard-student.component.html
+│   │   │   │   ├── dashboard-student.component.scss
+│   │   │   │   ├── dashboard-student.component.spec.ts
+│   │   │   │   └── dashboard-student.component.ts
 │   │   │   ├── icons
 │   │   │   │   ├── icons.component.html
 │   │   │   │   ├── icons.component.scss

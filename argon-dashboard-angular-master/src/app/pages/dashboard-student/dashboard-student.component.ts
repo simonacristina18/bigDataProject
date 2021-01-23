@@ -10,17 +10,17 @@ import {
 } from '../../variables/charts';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-dashboard-student',
+  templateUrl: './dashboard-student.component.html',
+  styleUrls: ['./dashboard-student.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardStudentComponent implements OnInit {
 
   public datasets: any;
   public data: any;
   public salesChart;
-  public clicked: boolean = true;
-  public clicked1: boolean = false;
+  public clicked = true;
+  public clicked1 = false;
 
   ngOnInit() {
 
@@ -48,6 +48,7 @@ export class DashboardComponent implements OnInit {
 			type: 'line',
 			options: chartExample1.options,
 			data: chartExample1.data
+      // tslint:disable-next-line:indent
 		});
   }
 
