@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>Student Groups</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -56,30 +56,34 @@
                                        placeholder="Programme of study">
                             </div>
                             <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control form-control-user" id="year"
+                                           placeholder="Year of study">
+                                </div>
+                                <div class="col-sm-4 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control form-control-user" id="series"
                                            placeholder="Series">
                                 </div>
-                                <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" id="group"
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control form-control-user" id="currentGroup"
                                            placeholder="Current group">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="small mb-1">Introduce your preferred group to change with: </div>
+                                <div class="small mb-1">Introduce your preferred group to change with:</div>
                                 <input type="text" class="form-control form-control-user" id="groupToChange"
-                                       placeholder="Group to change">
+                                       placeholder="">
                             </div>
                             <div class="form-group">
-                                <div class="small mb-1">Introduce your preferred colleagues (Optional): </div>
+                                <div class="small mb-1">Introduce your preferred colleagues (Optional):</div>
                                 <input type="text" class="form-control form-control-user" id="colleagues"
                                        placeholder="">
                             </div>
                             <hr>
-                            <a href="request-sent.html" class="btn btn-primary btn-user btn-block" onclick="changeGroup()">
+                            <a href="request-sent.html" class="btn btn-primary btn-user btn-block"
+                               onclick="changeGroup()">
                                 Submit
                             </a>
-
                         </form>
                     </div>
                 </div>
