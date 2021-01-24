@@ -6,9 +6,6 @@ var user = {
     }
 };
 
-var endpoint = "https://localhost/api/login";
-
-
 function selectRole(role){
     document.getElementById("dropdownMenuButton").innerHTML = role;
     this.user.role.name = role;
@@ -18,7 +15,7 @@ function login(){
 
     if(user.role.name === 'Student'){
         window.location.href = "dashboard-student.html";
-    } else {
+    } else if(user.role.name === 'Secretary Employee') {
         window.location.href = "dashboard-secretary.html";
     }
 
@@ -26,12 +23,15 @@ function login(){
     //     alert("login successful");
     // }
 
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('POST', endpoint);
-    // xhr.onreadystatechange = function () {
-    //     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-    //         window.alert(xhr.responseText);
-    //     }
-    // };
-    // xhr.send();
+    const http = new XMLHttpRequest();
+    const url = 'https://';
+
+    http.open("POST", url);
+    http.send();
+
+    http.onreadystatechange = function() {
+        if(this.readyState === XMLHttpRequest.DONE && this.status === 200){
+            console.log(http.responseText)
+        }
+    }
 }
