@@ -32,9 +32,8 @@ var colleagues = document.getElementById("colleagues");
 let http = new XMLHttpRequest();
 
 function changeGroup(){
-
-    // student.firstName.value = firstName.value;
-    localStorage.setItem("firstName", firstName.value);
+    //example
+    // localStorage.setItem("firstName", firstName.value);
 
     // const url = 'https://';
     //
@@ -52,7 +51,8 @@ function changeGroup(){
 }
 
 function showNewRequest(){
-    document.getElementById("newRequestFirstName").innerHTML = localStorage.getItem("firstName");
+    //example
+    // document.getElementById("newRequestFirstName").innerHTML = localStorage.getItem("firstName");
 
     // const url = 'https://';
     //
@@ -69,16 +69,21 @@ function showNewRequest(){
 
 }
 
-
-
 var approvedProgressBar = document.getElementById("approvedProgressBar");
 var pendingProgressBar = document.getElementById("pendingProgressBar");
+var declinedProgressBar = document.getElementById("declinedProgressBar");
+
+//NEW REQUESTS
+var approveNewButtonContent = document.getElementById("approveNewContent");
+var approveNewButton = document.getElementById("approveNewButton");
+
+var declineNewButtonContent = document.getElementById("declineNewContent");
+var declineNewButton = document.getElementById("declineNewButton");
+
 
 function approveNewRequest(){
-    var approveNewButtonContent = document.getElementById("approveNewContent");
-    var approveNewButton = document.getElementById("approveNewButton");
-
     approveNewButton.style.visibility = "hidden";
+    declineNewButton.style.visibility = "hidden";
 
     if(approveNewButtonContent.style.display === "none"){
         approveNewButtonContent.style.display = "block";
@@ -87,11 +92,28 @@ function approveNewRequest(){
     }
 }
 
-function approvePendingRequest(){
-    var approvePendingButtonContent = document.getElementById("approvePendingContent");
-    var approvePendingButton = document.getElementById("approvePendingButton");
+function declineNewRequest(){
 
+    declineNewButton.style.visibility = "hidden";
+    approveNewButton.style.visibility = "hidden";
+
+    if(declineNewButtonContent.style.display === "none"){
+        declineNewButtonContent.style.display = "block";
+    } else{
+        declineNewButtonContent.style.display = "none";
+    }
+}
+
+//PENDING REQUESTS
+
+var approvePendingButtonContent = document.getElementById("approvePendingContent");
+var approvePendingButton = document.getElementById("approvePendingButton");
+var declinePendingButtonContent = document.getElementById("declinePendingContent");
+var declinePendingButton = document.getElementById("declinePendingButton");
+
+function approvePendingRequest(){
     approvePendingButton.style.visibility = "hidden";
+    declinePendingButton.style.visibility = "hidden";
 
     if(approvePendingButtonContent.style.display === "none"){
         approvePendingButtonContent.style.display = "block";
@@ -100,12 +122,32 @@ function approvePendingRequest(){
     }
 }
 
+function declinePendingRequest(){
+    approvePendingButton.style.visibility = "hidden";
+    declinePendingButton.style.visibility = "hidden";
+
+    if(declinePendingButtonContent.style.display === "none"){
+        declinePendingButtonContent.style.display = "block";
+    } else{
+        declinePendingButtonContent.style.display = "none";
+    }
+}
+
+//nu merge
 function updateStatus(){
     if(approveNewRequest() || approvePendingRequest()){
         pendingProgressBar.style.visibility = "hidden";
 
         if(approvedProgressBar.style.display === "none"){
             approvedProgressBar.style.display = "block";
+        }
+    }
+
+    if(declineNewRequest() || declinePendingRequest()){
+        declinedProgressBar.style.visibility = "hidden";
+
+        if(declinedProgressBar.style.display === "none"){
+            declinedProgressBar.style.display = "block";
         }
     }
 }
